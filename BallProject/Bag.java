@@ -41,9 +41,9 @@ public class Bag {
         }*/
 
         int count = 0;
+        Random rnd = new Random();
 // Depending on what colour the balls are either black ball is placed or white.
         while (bag.size() > 1) {
-            Random rnd = new Random();
             int select1 = rnd.nextInt(bag.size());
             int select2 = rnd.nextInt(bag.size());
             System.out.println(select1);
@@ -52,18 +52,27 @@ public class Bag {
             Balls indexPos2 = bag.get(select2);
             count++;
             if (bag.size() != 1) {
+                System.out.println(bag);
+                System.out.println("Printing size: " + bag.size());
                 if (bag.get(select1).equals(blackBalls) && indexPos2.equals(blackBalls)) {
                     System.out.println("Both balls are black.");
-                    bag.remove(indexPos1);
+                    System.out.println("Removing black ball");
+                    bag.remove(blackBalls);
+                    bag.remove(blackBalls);
+                    bag.add(blackBalls);
                     continue;
                 }if (indexPos1.equals(whiteBalls) && indexPos2.equals(whiteBalls)) {
                     System.out.println("both Balls are white");
-                    bag.remove(indexPos1);
-                    bag.remove(indexPos1);
+                    bag.remove(whiteBalls);
+                    bag.remove(whiteBalls);
                     bag.add(blackBalls);
+                    System.out.println("Removing 2 white balls. adding black.");
                 }if (indexPos1.equals(whiteBalls) && indexPos2.equals(blackBalls) || indexPos1.equals(blackBalls) && indexPos2.equals(whiteBalls)) {
-                    bag.remove(indexPos2);
+                    bag.remove(select1);
+                    bag.remove(select2);
+                    bag.add(whiteBalls);
                     System.out.println("Both balls are different.");
+                    System.out.println("Removing white ball");
                 }
             }
         }
