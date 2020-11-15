@@ -48,10 +48,8 @@ public class Bag {
             int select1 = rnd.nextInt(bag.size());
             Balls indexPos1 = bag.get(select1);
             int select2 = rnd.nextInt(bag.size());
-
             while (select2 == select1) {
                 select2 = rnd.nextInt(bag.size());
-
             }
             Balls indexPos2 = bag.get(select2);
             System.out.println(select1);
@@ -59,7 +57,7 @@ public class Bag {
             if (bag.size() != 1) {
                 System.out.println(bag);
                 System.out.println("Printing size: " + bag.size());
-                if (bag.get(select1).equals(blackBalls) && indexPos2.equals(blackBalls)) {
+                if (indexPos1.equals(blackBalls) && indexPos2.equals(blackBalls)) {
                     System.out.println("Both balls are black.");
                     System.out.println("Removing black ball");
                     bag.remove(blackBalls);
