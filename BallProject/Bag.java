@@ -44,33 +44,39 @@ public class Bag {
         Random rnd = new Random();
 // Depending on what colour the balls are either black ball is placed or white.
         while (bag.size() > 1) {
+            count++;
             int select1 = rnd.nextInt(bag.size());
+            Balls indexPos1 = bag.get(select1);
             int select2 = rnd.nextInt(bag.size());
+
+            while (select2 == select1) {
+                select2 = rnd.nextInt(bag.size());
+
+            }
+            Balls indexPos2 = bag.get(select2);
             System.out.println(select1);
             System.out.println(select2);
-            Balls indexPos1 = bag.get(select1);
-            Balls indexPos2 = bag.get(select2);
-            count++;
             if (bag.size() != 1) {
                 System.out.println(bag);
                 System.out.println("Printing size: " + bag.size());
                 if (bag.get(select1).equals(blackBalls) && indexPos2.equals(blackBalls)) {
                     System.out.println("Both balls are black.");
                     System.out.println("Removing black ball");
+                    bag.remove(blackBalls);
+                    bag.remove(blackBalls);
                     bag.add(blackBalls);
-                    bag.remove(blackBalls);
-                    bag.remove(blackBalls);
                     continue;
                 }if (indexPos1.equals(whiteBalls) && indexPos2.equals(whiteBalls)) {
                     System.out.println("both Balls are white");
+                    bag.remove(whiteBalls);
+                    bag.remove(whiteBalls);
                     bag.add(blackBalls);
-                    bag.remove(whiteBalls);
-                    bag.remove(whiteBalls);
                     System.out.println("Removing 2 white balls. adding black.");
+                    continue;
                 }if (indexPos1.equals(whiteBalls) && indexPos2.equals(blackBalls) || indexPos1.equals(blackBalls) && indexPos2.equals(whiteBalls)) {
+                    bag.remove(whiteBalls);
+                    bag.remove(blackBalls);
                     bag.add(whiteBalls);
-                    bag.remove(select1);
-                    bag.remove(select2);
                     System.out.println("Both balls are different.");
                     System.out.println("Removing white ball");
                 }
