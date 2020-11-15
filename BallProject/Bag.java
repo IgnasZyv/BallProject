@@ -15,11 +15,11 @@ public class Bag {
 
     public static void main(String[] args) {
 
-//CREATING 2 OBJECTS, WHITE & BLACK BALLS
+//CREATING 2 Objects white balls and black balls.
         Balls whiteBalls = new Balls("White", 16);
         Balls blackBalls = new Balls("Black", 20);
 
-//ADDING THE VALUES OF BLACK-BALL AND WHITE-BALL TO AN INT CALLED "TOTALBALLS"
+//ADDING the values of whiteBalls with blackBalls.
         int totalBalls = whiteBalls.getAmount() + blackBalls.getAmount();
 
 //ASSIGNING objects to index i inside an ArrayList called "whiteBalls"
@@ -45,7 +45,6 @@ public class Bag {
         int count = 0;
 //DECLARING a random Object
         Random rnd = new Random();
-
 //DO while bag size is greater than 1.
         while (bag.size() > 1) {
             count++;
