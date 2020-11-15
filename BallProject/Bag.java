@@ -48,7 +48,7 @@ public class Bag {
 //DO while bag size is greater than 1.
         while (bag.size() > 1) {
             count++;
-//SELECTING 2 random balls from the bag.
+    //SELECTING 2 random balls from the bag.
             int select1 = rnd.nextInt(bag.size());
             int select2 = rnd.nextInt(bag.size());
             // IF select 2 is the same as select 1 take a new index value from the bag.
@@ -56,33 +56,33 @@ public class Bag {
                 select2 = rnd.nextInt(bag.size());
             }
 
-//IF the bag size does not equal 1: Do this.
+    //IF the bag size does not equal 1: Do this.
             if (bag.size() != 1) {
                 System.out.println("Amount of Balls left: " + bag.size());
 
-//IF - SELECT 1 & 2 ARE BOTH BLACK-BALLS: DO THIS
+        //IF - SELECT 1 & 2 ARE BOTH BLACK-BALLS: DO THIS
                 if (bag.get(select1).equals(blackBalls) && bag.get(select2).equals(blackBalls)) {
-                    System.out.println("You got 2 Blackballs.");
+                    System.out.println("You got 2 Black balls.");
                     bag.remove(blackBalls);
                     bag.remove(blackBalls);
                     bag.add(blackBalls);
-                    System.out.println("Removing 2 Blackballs, Adding Blackball");
+                    System.out.println("Removing 2 Blackballs, Adding Black ball");
                     System.out.println("");
                     continue;
                 }
 
-//IF - SELECT 1 & 2 ARE BOTH WHITE-BALLS: DO THIS
+        //IF - SELECT 1 & 2 ARE BOTH WHITE-BALLS: DO THIS
                 if (bag.get(select1).equals(whiteBalls) && bag.get(select2).equals(whiteBalls)) {
-                    System.out.println("You got 2 Whiteballs");
+                    System.out.println("You got 2 White balls");
                     bag.remove(whiteBalls);
                     bag.remove(whiteBalls);
                     bag.add(blackBalls);
-                    System.out.println("Removing 2 Whiteballs. Adding Blackball.");
+                    System.out.println("Removing 2 White balls. Adding Black ball.");
                     System.out.println("");
                     continue;
                 }
 
-//IF - SELECT 1 & 2 ARE WHITE AND BLACK OR BLACK AND WHITE: DO THIS
+        //IF - SELECT 1 & 2 ARE WHITE AND BLACK OR BLACK AND WHITE: DO THIS
                 if (bag.get(select1).equals(whiteBalls) && bag.get(select2).equals(blackBalls)
                         || bag.get(select1).equals(blackBalls) && bag.get(select2).equals(whiteBalls)) {
                     bag.remove(whiteBalls);
