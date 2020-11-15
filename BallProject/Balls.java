@@ -1,19 +1,14 @@
 package BallProject;
 
 public class Balls {
-    private String colour;
+    private final String colour;
     private int amount;
 
-    public Balls(String type) {
+    public Balls(String type, int num) {
         colour = type;
+        amount = num;
     }
 
-    public String getColour() {
-        return colour;
-    }
-    public void changeAmount(int num){
-        this.setAmount(num);
-    }
     public int getAmount() {
         return amount;
     }
