@@ -15,49 +15,49 @@ public class Bag {
 
     public static void main(String[] args) {
 
-//CREATING 2 OBJECTS, WHITE & BLACK
+//CREATING 2 OBJECTS, WHITE & BLACK BALLS
         Balls whiteBalls = new Balls("White", 16);
         Balls blackBalls = new Balls("Black", 20);
 
 //ADDING THE VALUES OF BLACK-BALL AND WHITE-BALL TO AN INT CALLED "TOTALBALLS"
         int totalBalls = whiteBalls.getAmount() + blackBalls.getAmount();
 
-//ASSIGNING THE VALUE OF WHITE-BALL TO AN ARRAYLIST CALLED "WHITE-BALL"
+//ASSIGNING objects to index i inside an ArrayList called "whiteBalls"
         ArrayList<Balls> white = new ArrayList<>();
         for (int i = 0; i < whiteBalls.getAmount(); i++) {
             white.add(whiteBalls);
         }
 
-//ASSIGNING THE VALUE OF BLACK-BALL TO AN ARRAYLIST CALLED "BLACK-BALL"
+//ASSIGNING objects to index i inside an ArrayList called "blackBalls"
         ArrayList<Balls> black = new ArrayList<>();
         for (int i = 0; i < blackBalls.getAmount(); i++) {
             black.add(blackBalls);
         }
 
-//CREATING NEW "BAG" ARRAYLIST AND ASSIGNING THE VALUES OF "INT TOTALBALLS"
+//CREATING new ArrayList "bag" and making it the size of totalBalls.
         ArrayList<Balls> bag = new ArrayList<>(totalBalls);
 
-//INDEX 0 = WHITE-BALL, INDEX 16 = BLACK-BALL
+//POPULATE the "bag" ArrayList with white balls at index 0 and black balls at index 16.
         bag.addAll(0, white);
         bag.addAll(16, black);
 
-//COUNT TOTAL BALLS
+//COUNT total balls.
         int count = 0;
-
-//DECLARING A RANDOM OBJECT
+//DECLARING a random Object
         Random rnd = new Random();
 
-//IF THE BAG-ARRAY IS MORE THAN 1, "INT COUNT" WILL INCREMENT
+//DO while bag size is greater than 1.
         while (bag.size() > 1) {
             count++;
-//SELECTING 2 RANDOM BALLS FROM THE BAG
+//SELECTING 2 random balls from the bag.
             int select1 = rnd.nextInt(bag.size());
             int select2 = rnd.nextInt(bag.size());
+            // IF select 2 is the same as select 1 take a new index value from the bag.
             while (select2 == select1) {
                 select2 = rnd.nextInt(bag.size());
             }
 
-//IF THE BAG DOES NOT EQUAL 1: DO THIS
+//IF the bag size does not equal 1: Do this.
             if (bag.size() != 1) {
                 System.out.println("Amount of Balls left: " + bag.size());
 
