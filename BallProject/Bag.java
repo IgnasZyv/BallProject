@@ -16,35 +16,34 @@ public class Bag {
     public static void main(String[] args) {
         Balls whiteBalls = new Balls("White");
         Balls blackBalls = new Balls("Black");
-        Balls[] objArray;
         whiteBalls.setAmount(16);
         blackBalls.setAmount(20);
         int totalBalls = whiteBalls.getAmount() + blackBalls.getAmount();
         //Create two arrays that hold white and black balls together.
-            // Adding white balls into array "white".
-        ArrayList<Balls> white = new ArrayList<Balls>();
+        // Adding white balls into array "white".
+        ArrayList<Balls> white = new ArrayList<>();
         for (int i = 0; i < whiteBalls.getAmount(); i++) {
             white.add(whiteBalls);
             //System.out.println(i);
         }       // Adding black balls into array "black".
-        ArrayList<Balls> black = new ArrayList<Balls>();
+        ArrayList<Balls> black = new ArrayList<>();
         for (int i = 0; i < blackBalls.getAmount(); i++) {
             black.add(blackBalls);
             //System.out.println(i);
         }    // New Array which has all contents of arrays white and black.
-        ArrayList<Balls> bag = new ArrayList<Balls>(totalBalls);
+        ArrayList<Balls> bag = new ArrayList<>(totalBalls);
         bag.addAll(0, white);
-        bag.addAll(15, black);
-
-/*        System.out.println("Printing contents of bag.");
+        bag.addAll(16, black);
+        /*
+       System.out.println("Printing contents of bag.");
         for (Balls i : bag) {
             System.out.println("ball: " + i);
-        }*/
-
+        }
+        */
         int count = 0;
+        Random rnd = new Random();
 // Depending on what colour the balls are either black ball is placed or white.
         while (bag.size() > 1) {
-            Random rnd = new Random();
             int select1 = rnd.nextInt(bag.size());
             int select2 = rnd.nextInt(bag.size());
             System.out.println(select1);
@@ -52,21 +51,28 @@ public class Bag {
             Balls indexPos1 = bag.get(select1);
             Balls indexPos2 = bag.get(select2);
             count++;
-            if(bag.size() != 1){
-                if (bag.get(select1).equals(blackBalls) && indexPos2.equals(blackBalls)){
+            if (bag.size() != 1) {
+                System.out.println(bag);
+                System.out.println("Printing size: " + bag.size());
+                if (bag.get(select1).equals(blackBalls) && indexPos2.equals(blackBalls)) {
                     System.out.println("Both balls are black.");
-                    bag.remove(indexPos1);
+                    System.out.println("Removing black ball");
+                    bag.add(blackBalls);
+                    bag.remove(blackBalls);
+                    bag.remove(blackBalls);
                     continue;
-
                 }if (indexPos1.equals(whiteBalls) && indexPos2.equals(whiteBalls)) {
                     System.out.println("both Balls are white");
-                    bag.remove(indexPos1);
-                    bag.remove(indexPos1);
                     bag.add(blackBalls);
-
-                }else{
+                    bag.remove(whiteBalls);
+                    bag.remove(whiteBalls);
+                    System.out.println("Removing 2 white balls. adding black.");
+                }if (indexPos1.equals(whiteBalls) && indexPos2.equals(blackBalls) || indexPos1.equals(blackBalls) && indexPos2.equals(whiteBalls)) {
+                    bag.add(whiteBalls);
+                    bag.remove(select1);
+                    bag.remove(select2);
                     System.out.println("Both balls are different.");
-                    bag.remove(indexPos2);
+                    System.out.println("Removing white ball");
                 }
             }
         }
@@ -74,5 +80,7 @@ public class Bag {
         System.out.println("Count is : " + count);
     }
 }
+
+
 
 
