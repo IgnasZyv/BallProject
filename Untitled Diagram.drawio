@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-16T00:45:58.820Z" agent="5.0 (Windows)" etag="gG7EHVgI9C5x-Zd5XUw7" version="13.9.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-16T00:47:02.615Z" agent="5.0 (Windows)" etag="xX0ibfa2YA0tJ2AbVh9K" version="13.9.8" type="github">
   <diagram id="bgkW2lqaMROe556IBYIa" name="Page-1">
     <mxGraphModel dx="1089" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -128,12 +128,12 @@
         <mxCell id="6nYO80QD4L5rVwFp7ds1-35" value="while select2 == select1 " style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="267.5" y="480" width="110" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="6nYO80QD4L5rVwFp7ds1-39" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="6nYO80QD4L5rVwFp7ds1-37">
+        <mxCell id="6nYO80QD4L5rVwFp7ds1-39" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="6nYO80QD4L5rVwFp7ds1-37">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="333" y="470" as="targetPoint" />
+            <mxPoint x="340" y="580" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="483" y="470" />
-              <mxPoint x="333" y="470" />
+              <mxPoint x="483" y="580" />
+              <mxPoint x="340" y="580" />
             </Array>
           </mxGeometry>
         </mxCell>
