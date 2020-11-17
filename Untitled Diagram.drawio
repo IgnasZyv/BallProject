@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-17T16:46:51.307Z" agent="5.0 (Windows)" etag="2bmP8OAyRix3L1dfOZyU" version="13.9.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-17T16:58:39.387Z" agent="5.0 (Windows)" etag="rLX9-v1WUPqqsOoWuOTS" version="13.9.9" type="github">
   <diagram id="bgkW2lqaMROe556IBYIa" name="Page-1">
     <mxGraphModel dx="1089" dy="739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -44,13 +44,9 @@
             <mxPoint x="337.5" y="700" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6nYO80QD4L5rVwFp7ds1-56" value="false" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jumpStyle=none;jumpSize=16;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="6nYO80QD4L5rVwFp7ds1-10" edge="1">
+        <mxCell id="rNPBaIKNhGoAXlA6VHKa-4" value="false" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="6nYO80QD4L5rVwFp7ds1-10">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="310" y="210" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="70" y="645" />
-              <mxPoint x="70" y="210" />
-            </Array>
+            <mxPoint x="600" y="645.1666666666667" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="6nYO80QD4L5rVwFp7ds1-10" value="If bag size does not = 1." style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
@@ -67,9 +63,10 @@
         </mxCell>
         <mxCell id="6nYO80QD4L5rVwFp7ds1-41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="6nYO80QD4L5rVwFp7ds1-14" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="340" y="340" as="targetPoint" />
+            <mxPoint x="340" y="210" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="608" y="340" />
+              <mxPoint x="608" y="210" />
+              <mxPoint x="340" y="210" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -155,11 +152,17 @@
         <mxCell id="6nYO80QD4L5rVwFp7ds1-52" value="Print last remaining ball is:" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="360" width="120" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="rNPBaIKNhGoAXlA6VHKa-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6nYO80QD4L5rVwFp7ds1-54" target="rNPBaIKNhGoAXlA6VHKa-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="6nYO80QD4L5rVwFp7ds1-54" value="Print count" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="430" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="rNPBaIKNhGoAXlA6VHKa-1" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;fill white and black arrays with balls of same colour.&lt;/div&gt;&lt;div&gt;fill bag array with white and black balls.&lt;/div&gt;&lt;br&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="340" y="80" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rNPBaIKNhGoAXlA6VHKa-5" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="500" width="120" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
