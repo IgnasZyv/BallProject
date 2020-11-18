@@ -48,17 +48,17 @@ public static void main(String[] args) {
         // DECLARING a random Object
         Random rnd = new Random();
         // DO while bag size is greater than 1.
-        while (bag.size() > 1) {
+        while (bag.size() > 1) { // O(n)
                 count++;
                 // SELECTING 2 random balls from the bag.
                 int select1 = rnd.nextInt(bag.size());
                 int select2 = rnd.nextInt(bag.size());
                 // IF select 2 is the same as select 1 take a new index value from the bag.
-                while (select2 == select1) {    // O(n2)
+                while (select2 == select1) {    // O(n^2)
                         select2 = rnd.nextInt(bag.size());
                 }
                 // IF the bag size does not equal 1: Do this.
-                if (bag.size() != 1) { // O(n2)
+                if (bag.size() != 1) { // O(n)
                         System.out.println("Amount of Balls left: " + bag.size());
 
                         // IF - SELECT 1 & 2 ARE BOTH BLACK-BALLS: DO THIS
