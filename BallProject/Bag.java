@@ -54,11 +54,11 @@ public static void main(String[] args) {
                 int select1 = rnd.nextInt(bag.size());
                 int select2 = rnd.nextInt(bag.size());
                 // IF select 2 is the same as select 1 take a new index value from the bag.
-                while (select2 == select1) {    // O(n^2)
+                while (select2 == select1) {
                         select2 = rnd.nextInt(bag.size());
                 }
                 // IF the bag size does not equal 1: Do this.
-                if (bag.size() != 1) { // O(n)
+                if (bag.size() != 1) {
                         System.out.println("Amount of Balls left: " + bag.size());
 
                         // IF - SELECT 1 & 2 ARE BOTH BLACK-BALLS: DO THIS
